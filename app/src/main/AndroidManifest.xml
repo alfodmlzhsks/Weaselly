@@ -2,14 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="weaselly.gtec.com.weaselly">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/weaselly_icon_dark"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/weaselly_icon_dark"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".InputAnswerActivity"></activity>
+        <activity android:name=".InputDataActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".AddSimpleInfoActivity" />
+        <activity android:name=".CreateAccountActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".TrainingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
