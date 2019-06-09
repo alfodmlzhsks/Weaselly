@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="weaselly.gtec.com.weaselly.TrainingActivity" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TrainingActivity">
+        <RelativeLayout
+            android:id="@+id/relStatusBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorBlue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI 트레이닝"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:layout_centerInParent="true"
+                android:textSize="15dp"/>
+
+        </RelativeLayout>
+
+        <WebView
+            android:layout_below="@id/relStatusBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/wvShowMun"></WebView>
+
+
+
+
+
+    </RelativeLayout>
+
+</layout>

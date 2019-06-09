@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="weaselly.gtec.com.weaselly.LoginActivity" />
+
+    </data>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background_box">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:gravity="center|left|bottom">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/weaselly_logo"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="40dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Weaselly에 오신것을 환영합니다.\n여러분들이 빠르게 도약할 수 있도록\n도와드리겠습니다."
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:lineSpacingExtra="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="@drawable/background_login_white"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:paddingTop="40dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_gravity="left"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/box_edit"
+            android:textSize="18dp"
+            android:inputType="textEmailAddress"
+            android:padding="13dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:layout_gravity="left"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/box_edit"
+            android:inputType="textPassword"
+            android:textSize="18dp"
+            android:padding="13dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/box_gray"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_weight="1"
+                android:id="@+id/btnCreateAccount"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/box_point"
+                android:layout_height="wrap_content"
+                android:text="로그인"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:id="@+id/btnLogin"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/colorPurple"
+            android:textSize="15dp"
+            android:text="Weaselly"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</layout>
