@@ -77,7 +77,8 @@
             android:background="@drawable/box_edit"
             android:textSize="18dp"
             android:inputType="textPassword"
-            android:padding="13dp"/>
+            android:padding="13dp"
+            android:id="@+id/edtPW"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,7 +92,8 @@
             android:background="@drawable/box_edit"
             android:textSize="18dp"
             android:inputType="textPassword"
-            android:padding="13dp"/>
+            android:padding="13dp"
+            android:id="@+id/edtPWAgain"/>
 
     </LinearLayout>
     <LinearLayout
@@ -114,7 +116,8 @@
                 android:text="이전으로"
                 android:textSize="15dp"
                 android:textStyle="bold"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:id="@+id/btnBack"/>
             <Button
                 android:layout_width="110dp"
                 android:layout_marginLeft="20dp"

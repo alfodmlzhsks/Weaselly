@@ -36,7 +36,8 @@
                 android:text="진영,\nWeaselly쌤이 응원한다!"
                 android:textColor="#fff"
                 android:lineSpacingExtra="10dp"
-                android:textSize="20dp"/>
+                android:textSize="20dp"
+                android:id="@+id/tvTitle"/>
 
         </LinearLayout>
         <FrameLayout
@@ -81,7 +82,8 @@
             android:layout_marginTop="10dp"
             android:text="취약유형\n분석하기"
             android:textSize="18dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:id="@+id/btnAnalyze"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"

@@ -76,7 +76,8 @@
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/box_edit"
                 android:textSize="18dp"
-                android:padding="13dp"/>
+                android:padding="13dp"
+                android:id="@+id/edtName"/>
             
             <TextView
                 android:layout_width="wrap_content"
@@ -90,7 +91,8 @@
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/box_edit"
                 android:textSize="18dp"
-                android:padding="13dp"/>
+                android:padding="13dp"
+                android:id="@+id/edtEmail"/>
 
 
         </LinearLayout>
@@ -114,7 +116,8 @@
                     android:text="이전으로"
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="#000"/>
+                    android:textColor="#000"
+                    android:id="@+id/btnBack"/>
                 <Button
                     android:layout_width="110dp"
                     android:layout_marginLeft="20dp"
@@ -123,6 +126,7 @@
                     android:text="함께하기"
                     android:textSize="15dp"
                     android:textStyle="bold"
+                    android:id="@+id/btnJoin"
                     android:textColor="#fff"/>
             </LinearLayout>
 
