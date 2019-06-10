@@ -38,6 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1번 문제 정답 입력"
+                android:id="@+id/tvCurrentCount"
                 android:textColor="#fff"
                 android:textSize="16dp"/>
             <Button
@@ -45,6 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="입력 내용 보기"
+                android:id="@+id/btnCheckInputAnswerStatus"
                 android:background="@drawable/button_round_line"
                 android:paddingLeft="20dp"
                 android:textSize="12dp"
@@ -80,12 +82,14 @@
                             android:elevation="10dp"
                             android:layout_margin="5dp"
                             android:text="1"
+                            android:id="@+id/inputAnswer1"
                             android:textSize="20dp"/>
                         <Button
                             android:layout_height="match_parent"
                             android:background="@drawable/button_answer"
                             android:elevation="10dp"
                             android:layout_margin="5dp"
+                            android:id="@+id/inputAnswer2"
                             android:text="2"
                             android:textSize="20dp"/>
                     </TableRow>
@@ -96,6 +100,7 @@
                             android:background="@drawable/button_answer"
                             android:elevation="10dp"
                             android:layout_margin="5dp"
+                            android:id="@+id/inputAnswer3"
                             android:text="3"
                             android:textSize="20dp"/>
                         <Button
@@ -103,6 +108,7 @@
                             android:background="@drawable/button_answer"
                             android:elevation="10dp"
                             android:layout_margin="5dp"
+                            android:id="@+id/inputAnswer4"
                             android:text="4"
                             android:textSize="20dp"/>
                     </TableRow>
@@ -113,6 +119,7 @@
                             android:background="@drawable/button_answer"
                             android:elevation="10dp"
                             android:layout_margin="5dp"
+                            android:id="@+id/inputAnswer5"
                             android:text="5"
                             android:textSize="20dp"/>
                         <Button
@@ -121,6 +128,7 @@
                             android:elevation="10dp"
                             android:layout_margin="5dp"
                             android:text="Skip!"
+                            android:id="@+id/inputAnswerSkip"
                             android:textColor="#fff"
                             android:textSize="20dp"/>
                     </TableRow>
@@ -144,8 +152,9 @@
                     android:layout_weight="1"
                     android:background="@drawable/button_gray_round_line"
                     android:layout_height="wrap_content"
-                    android:text="이전으로"
+                    android:text="이전 문제"
                     android:textSize="13dp"
+                    android:id="@+id/btnPrevQuestion"
                     android:textStyle="bold"
                     android:textColor="#000"/>
                 <Button
@@ -153,7 +162,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/button_gray_round_line"
                     android:layout_height="wrap_content"
-                    android:text="이전으로"
+                    android:text="그만하기"
+                    android:id="@+id/btnStop"
                     android:layout_marginRight="30dp"
                     android:layout_marginLeft="30dp"
                     android:textSize="13dp"
@@ -164,8 +174,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/box_point"
                     android:layout_height="wrap_content"
-                    android:text="다음으로"
-                    android:id="@+id/btnNextStep2"
+                    android:text="다음 문제"
+                    android:id="@+id/btnNextQuestion"
                     android:textSize="13dp"
                     android:textStyle="bold"
                     android:textColor="#fff"/>

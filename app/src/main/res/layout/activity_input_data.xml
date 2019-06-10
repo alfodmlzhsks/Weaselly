@@ -10,14 +10,14 @@
     </data>
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:orientation="vertical"
+            android:id="@+id/linTitleBox"
             android:background="@drawable/background_main">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,11 +60,45 @@
             </LinearLayout>
 
         </LinearLayout>
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"></LinearLayout>
+            android:layout_height="match_parent"
+            android:layout_below="@id/linTitleBox">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relSelectBox">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="모의고사 입력"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relSelectBox"
+                android:id="@+id/relAnswerBox">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="정답 바로 입력"
+                    android:id="@+id/btnDirectInputAnswer"/>
 
-    </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relSendBox"
+                android:layout_below="@id/relAnswerBox">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnSendData"
+                    android:text="입력한 모의고사 분석하기"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </layout>
