@@ -30,7 +30,7 @@ public class TrainingActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_training);
         binding.setActivity(this);
 
-        binding.wvShowMun.loadUrl("file://"+Environment.getExternalStorageDirectory()+"/"+Environment.DIRECTORY_DOWNLOADS+"/mun.html");
+        binding.wvShowMun.loadUrl("file://"+Environment.getExternalStorageDirectory()+"/"+Environment.DIRECTORY_DOWNLOADS+"/tests.html");
 
 
     }

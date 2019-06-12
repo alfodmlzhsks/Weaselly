@@ -10,14 +10,6 @@ public class CheckPermission {
     String[] myPermission = null;
     Activity context = null;
     String[] deniedPermission = null;
-    /*
-    ACCESS_FINE_LOCATION
-    ACCESS_COARSE_LOCATION
-    CAMERA
-    WRITE_EXETRNAL_STORAGE
-    READ_EXETERNAL_STORAGE
-
-     */
 
     CheckPermission(Activity context, String... str) {
         this.context = context;

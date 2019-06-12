@@ -2,10 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="weaselly.gtec.com.weaselly">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,23 +13,20 @@
         android:roundIcon="@drawable/weaselly_icon_dark"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InputAnswerActivity"></activity>
-        <activity android:name=".InputDataActivity" />
+        <activity android:name=".EndInputActivity"></activity>
+        <activity android:name=".CreateAccountActivity" />
+        <activity android:name=".InputAnswerActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".AddSimpleInfoActivity" />
-        <activity android:name=".CreateAccountActivity">
-
-        </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".TrainingActivity"></activity>
+        <activity android:name=".InputDataActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TrainingActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

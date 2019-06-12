@@ -78,7 +78,36 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/relSelectBox"
                 android:id="@+id/relAnswerBox">
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_gray_line"
+                    android:id="@+id/relChooseTest"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spSetYear"></Spinner>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:text="년 "/>
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spSetMonth"></Spinner>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:text="월 모의고사"/>
+                </LinearLayout>
                 <Button
+                    android:layout_below="@id/relChooseTest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="정답 바로 입력"
