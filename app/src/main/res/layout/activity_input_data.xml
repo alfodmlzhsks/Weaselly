@@ -51,7 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="right|center"
-                    android:text="진영이의 취약점을 분석하꺼야\n지금까지 풀었던 모의고사 답안을 입력하지\n직므 직접 모의고사를 풀면서 입력해도 괜찮아"
+                    android:text="진영이의 취약점을 분석할꺼야\n지금까지 풀었던 모의고사 답안을 입력하지\n지금 직접 모의고사를 풀면서 입력해도 괜찮아"
                     android:textColor="#fff"
                     android:lineSpacingExtra="5dp"/>
 

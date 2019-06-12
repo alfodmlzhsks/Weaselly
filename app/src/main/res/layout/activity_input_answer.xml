@@ -63,7 +63,8 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:gravity="center"
-            android:background="#fff">
+            android:background="#fff"
+            android:id="@+id/relShortAnswer">
             <LinearLayout
                 android:layout_above="@id/linControlBox"
                 android:layout_width="match_parent"
@@ -181,13 +182,111 @@
                     android:textStyle="bold"
                     android:textColor="#fff"/>
             </LinearLayout>
-
-
-
-
-
         </RelativeLayout>
 
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            android:background="#fff"
+            android:id="@+id/relLongAnswer"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_above="@id/linLongControlBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="*">
+                    <TableRow
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_answer"
+                            android:elevation="10dp"
+                            android:layout_margin="5dp"
+                            android:hint="정답을 입력해주세요"
+                            android:id="@+id/btnInputLongAnswer"
+                            android:textSize="20dp"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1">
+                        <Button
+                            android:id="@+id/btnInputLongAnswerSkip"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/button_answer_gray"
+                            android:elevation="10dp"
+                            android:text="Skip!"
+                            android:textColor="#fff"
+                            android:textSize="20dp" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linLongControlBox"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="#fff"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_gray_round_line"
+                    android:layout_height="wrap_content"
+                    android:text="이전 문제"
+                    android:textSize="13dp"
+                    android:id="@+id/btnLongPrevQuestion"
+                    android:textStyle="bold"
+                    android:textColor="#000"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_gray_round_line"
+                    android:layout_height="wrap_content"
+                    android:text="그만하기"
+                    android:id="@+id/btnLongStop"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="#000"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/box_point"
+                    android:layout_height="wrap_content"
+                    android:text="다음 문제"
+                    android:id="@+id/btnLongNextQuestion"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"/>
+            </LinearLayout>
+
+        </RelativeLayout>
     </LinearLayout>
 
 </layout>

@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import weaselly.gtec.com.weaselly.databinding.ActivityMainBinding;
 
@@ -34,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 name = preferences.getString("name", "null");
                 binding.tvTitle.setText(name+", \nWeaselly쌤이 응원한다!");
             }
-
-
         } else {
             Intent i = new Intent(getApplicationContext(), CreateAccountActivity.class);
             startActivity(i);
@@ -43,5 +42,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        binding.btnAnalyze.setOnClickListener(listener);
     }
+
+    View.OnClickListener listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent i = null;
+            switch(v.getId()) {
+                case R.id.btnAnalyze:
+                    i = new Intent(getApplicationContext(), InputDataActivity.class);
+                    startActivity(i);
+                    finish();
+                    break;
+            }
+        }
+    };
 }

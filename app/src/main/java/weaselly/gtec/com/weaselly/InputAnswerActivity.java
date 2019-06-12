@@ -24,8 +24,6 @@ public class InputAnswerActivity extends AppCompatActivity {
         eventListener();
 
         binding.tvCurrentCount.setText((answerStatus+1)+"번 문제 정답 입력");
-
-
     }
 
 
@@ -36,6 +34,8 @@ public class InputAnswerActivity extends AppCompatActivity {
         binding.btnInputAnswer4.setOnClickListener(listener);
         binding.btnInputAnswer5.setOnClickListener(listener);
         binding.btnInputAnswerSkip.setOnClickListener(listener);
+        binding.btnNextQuestion.setOnClickListener(listener);
+        binding.btnLongNextQuestion.setOnClickListener(listener);
 
     }
 
@@ -64,11 +64,17 @@ public class InputAnswerActivity extends AppCompatActivity {
                 case R.id.btnInputAnswerSkip:
                     data = -1;
                     break;
-
             }
+
 
             userAnswer[answerStatus]=data;
             answerStatus++;
+
+            // 서술형
+            if(answerStatus > 20) {
+                binding.relLongAnswer.setVisibility(View.VISIBLE);
+                binding.relShortAnswer.setVisibility(View.GONE);
+            }
 
             if(answerStatus >28){
                 binding.btnInputAnswerSkip.setEnabled(false);
