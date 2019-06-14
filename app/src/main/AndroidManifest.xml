@@ -18,11 +18,11 @@
         <activity android:name=".InputAnswerActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".AddSimpleInfoActivity" />
-        <activity android:name=".TrainingActivity"></activity>
+        <activity android:name=".InputDataActivity"></activity>
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".InputDataActivity">
+        <activity android:name=".TrainingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
