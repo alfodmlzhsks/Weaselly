@@ -218,6 +218,7 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/button_answer"
                             android:elevation="10dp"
+                            android:inputType="number"
                             android:layout_margin="5dp"
                             android:hint="정답을 입력해주세요"
                             android:id="@+id/btnInputLongAnswer"

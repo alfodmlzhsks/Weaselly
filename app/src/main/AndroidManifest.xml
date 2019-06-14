@@ -19,10 +19,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".AddSimpleInfoActivity" />
         <activity android:name=".TrainingActivity"></activity>
-        <activity android:name=".InputDataActivity">
+        <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".InputDataActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

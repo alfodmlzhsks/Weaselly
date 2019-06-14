@@ -36,20 +36,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/relMainBox"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:orientation="horizontal">
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="40dp"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:textSize="16dp"
             android:text="메인화면으로 가기"
+            android:textStyle="bold"
+            android:lineSpacingExtra="10dp"
+            android:background="@drawable/background_main_button"
             android:id="@+id/btnJumpToMain"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="40dp"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
             android:text="기출문제 더 입력하기"
+            android:lineSpacingExtra="10dp"
+            android:background="@drawable/background_main_button"
             android:id="@+id/btnAddData"/>
     </LinearLayout>
 
