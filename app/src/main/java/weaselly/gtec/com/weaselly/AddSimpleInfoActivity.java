@@ -65,6 +65,8 @@ public class AddSimpleInfoActivity extends AppCompatActivity {
         @Override
         public void onResponse(Call call, Response response) throws IOException {
             final String body = response.body().string();
+            final String name = body.split(", ")[0];
+            final String email = body.split(", ")[1];
 
             runOnUiThread(new Runnable() {
                 @Override
@@ -74,12 +76,13 @@ public class AddSimpleInfoActivity extends AppCompatActivity {
                         SharedPreferences.Editor editor = preferences.edit();
 
                         editor.putString("session", "1");
-                        editor.putString("name", body);
+                        editor.putString("name", name);
+                        editor.putString("email", email);
                         editor.commit();
 
                         Toast.makeText(getApplicationContext(), "회원가입 성공", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                        i.putExtra("name", body);
+                        i.putExtra("name", name);
                         startActivity(i);
                         finish();
                     } else {

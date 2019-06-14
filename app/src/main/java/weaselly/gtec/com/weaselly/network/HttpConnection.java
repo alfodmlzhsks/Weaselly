@@ -18,7 +18,7 @@ public class HttpConnection {
         this.client = new OkHttpClient();
     }
 
-    /** 웹 서버로 요청을 한다. */
+    //웹서버 통신
     public void requestRegister(String email, String pw, String name, Callback callback) {
         RequestBody body = new FormBody.Builder()
                 .add("userEmail", email)
@@ -27,6 +27,19 @@ public class HttpConnection {
                 .build();
         Request request = new Request.Builder()
                 .url("http://giruk.iptime.org/weaselly/man/register")
+                .post(body)
+                .build();
+        client.newCall(request).enqueue(callback);
+    }
+
+    public void requestFirstTest(String matterCode, String answer, String userEmail, Callback callback) {
+        RequestBody body = new FormBody.Builder()
+                .add("matterCode", matterCode)
+                .add("answer", answer)
+                .add("userEmail", userEmail)
+                .build();
+        Request request = new Request.Builder()
+                .url("http://giruk.iptime.org/weaselly/analyze/firstTest")
                 .post(body)
                 .build();
         client.newCall(request).enqueue(callback);
