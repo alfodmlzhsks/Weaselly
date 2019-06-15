@@ -67,6 +67,7 @@ public class AddSimpleInfoActivity extends AppCompatActivity {
             final String body = response.body().string();
             final String name = body.split(", ")[0];
             final String email = body.split(", ")[1];
+            final String index = body.split(", ")[2];
 
             runOnUiThread(new Runnable() {
                 @Override
@@ -78,6 +79,7 @@ public class AddSimpleInfoActivity extends AppCompatActivity {
                         editor.putString("session", "1");
                         editor.putString("name", name);
                         editor.putString("email", email);
+                        editor.putString("index", index);
                         editor.commit();
 
                         Toast.makeText(getApplicationContext(), "회원가입 성공", Toast.LENGTH_SHORT).show();

@@ -96,6 +96,7 @@
             android:elevation="15dp"
             android:text="취약유형\n트레이닝"
             android:textSize="18dp"
+            android:id="@+id/btnTraining"
             android:textStyle="bold"/>
     </LinearLayout>
     <LinearLayout
@@ -131,7 +132,8 @@
             android:text="Weaselly\n테스트"
             android:textAllCaps="false"
             android:textSize="18dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:id="@+id/btnTest"/>
 
     </LinearLayout>
     <LinearLayout

@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 
 public class SubjectiveAnswerBottomSheet extends BottomSheetDialogFragment {
 
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

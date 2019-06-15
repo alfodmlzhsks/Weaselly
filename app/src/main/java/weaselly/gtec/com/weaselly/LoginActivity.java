@@ -18,9 +18,6 @@ public class LoginActivity extends AppCompatActivity {
         binding.setActivity(this);
 
         eventListener();
-
-
-
     }
 
     private void eventListener(){
@@ -37,7 +34,6 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(createIntent);
                     overridePendingTransition(R.anim.anim_slide_out_left, R.anim.anim_slide_in_right);
                     break;
-
                 case R.id.btnLogin:
                     Intent mainIntent=new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(mainIntent);

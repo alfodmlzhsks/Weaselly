@@ -13,22 +13,27 @@
         android:roundIcon="@drawable/weaselly_icon_dark"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EndInputActivity"></activity>
+        <activity android:name=".TestActivity"></activity>
+
+        <service
+            android:name=".UpdateWeakService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".EndInputActivity" />
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".InputAnswerActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".AddSimpleInfoActivity" />
-        <activity android:name=".InputDataActivity"></activity>
+        <activity android:name=".InputDataActivity" />
         <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".TrainingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TrainingActivity" />
     </application>
 
 </manifest>

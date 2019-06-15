@@ -20,14 +20,15 @@ import okhttp3.Callback;
 import okhttp3.Response;
 import weaselly.gtec.com.weaselly.R;
 import weaselly.gtec.com.weaselly.TestActivity;
+import weaselly.gtec.com.weaselly.TrainingActivity;
 import weaselly.gtec.com.weaselly.databinding.SheetButtonBinding;
 import weaselly.gtec.com.weaselly.network.HttpConnection;
 
-public class ButtonAnswerBottomSheet extends BottomSheetDialogFragment implements View.OnClickListener{
+public class ButtonAnswerBottomSheet2 extends BottomSheetDialogFragment implements View.OnClickListener{
     SheetButtonBinding binding;
     ArrayList<Integer> answers;
     int size = TestActivity.matter_size;
-    int count = 1;
+    int count = 3;
     boolean isFinish = false;
     HttpConnection httpConnection = HttpConnection.getInstance();
     String email = "";
@@ -58,32 +59,32 @@ public class ButtonAnswerBottomSheet extends BottomSheetDialogFragment implement
         switch(v.getId()) {
             case R.id.btnInputAnswer1:
                 answers.add(1);
-                TestActivity.matterLoad(count);
-                count++;
+                TrainingActivity.matterLoad(count);
+                count = count + 3;
                 if(count > size) isFinish = true;
                 break;
             case R.id.btnInputAnswer2:
                 answers.add(2);
-                TestActivity.matterLoad(count);
-                count++;
+                TrainingActivity.matterLoad(count);
+                count = count + 2;
                 if(count > size) isFinish = true;
                 break;
             case R.id.btnInputAnswer3:
                 answers.add(3);
-                TestActivity.matterLoad(count);
-                count++;
+                TrainingActivity.matterLoad(count);
+                count = count + 5;
                 if(count > size) isFinish = true;
                 break;
             case R.id.btnInputAnswer4:
                 answers.add(4);
-                TestActivity.matterLoad(count);
-                count++;
+                TrainingActivity.matterLoad(count);
+                count = count + 3;
                 if(count > size) isFinish = true;
                 break;
             case R.id.btnInputAnswer5:
                 answers.add(5);
-                TestActivity.matterLoad(count);
-                count++;
+                TrainingActivity.matterLoad(count);
+                count = count + 5;
                 if(count > size) isFinish = true;
                 break;
         }
@@ -100,7 +101,7 @@ public class ButtonAnswerBottomSheet extends BottomSheetDialogFragment implement
                 matterAnswer = matterAnswer + "," + answer[i];
             }
 
-            httpConnection.requestFinalTest(email, matters, matterAnswer, callback);
+//            httpConnection.requestFinalTest(email, matters, matterAnswer, callback);
         }
     }
 

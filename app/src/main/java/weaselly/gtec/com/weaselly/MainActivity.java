@@ -31,9 +31,15 @@ public class MainActivity extends AppCompatActivity {
             // 회원가입해서 넘어온거라면
             if(name != null) {
                 binding.tvTitle.setText(name+", \nWeaselly쌤이 응원한다!");
+
+//                Intent i = new Intent(getApplicationContext(), UpdateWeakService.class);
+//                startService(i);
             } else { //그냥 켰다면
                 name = preferences.getString("name", "null");
                 binding.tvTitle.setText(name+", \nWeaselly쌤이 응원한다!");
+
+//                Intent i = new Intent(getApplicationContext(), UpdateWeakService.class);
+//                startService(i);
             }
         } else {
             Intent i = new Intent(getApplicationContext(), CreateAccountActivity.class);
@@ -43,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         binding.btnAnalyze.setOnClickListener(listener);
+        binding.btnTraining.setOnClickListener(listener);
+        binding.btnTest.setOnClickListener(listener);
     }
 
     View.OnClickListener listener = new View.OnClickListener() {
@@ -52,6 +60,16 @@ public class MainActivity extends AppCompatActivity {
             switch(v.getId()) {
                 case R.id.btnAnalyze:
                     i = new Intent(getApplicationContext(), InputDataActivity.class);
+                    startActivity(i);
+                    finish();
+                    break;
+                case R.id.btnTraining:
+                    i = new Intent(getApplicationContext(), TrainingActivity.class);
+                    startActivity(i);
+                    finish();
+                    break;
+                case R.id.btnTest:
+                    i = new Intent(getApplicationContext(), TestActivity.class);
                     startActivity(i);
                     finish();
                     break;

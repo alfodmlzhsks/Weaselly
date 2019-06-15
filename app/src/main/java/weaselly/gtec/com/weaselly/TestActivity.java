@@ -19,27 +19,27 @@ import java.io.IOException;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
-import weaselly.gtec.com.weaselly.bottomSheets.ButtonAnswerBottomSheet2;
+import weaselly.gtec.com.weaselly.bottomSheets.ButtonAnswerBottomSheet;
 import weaselly.gtec.com.weaselly.bottomSheets.SubjectiveAnswerBottomSheet;
-import weaselly.gtec.com.weaselly.databinding.ActivityTrainingBinding;
+import weaselly.gtec.com.weaselly.databinding.ActivityTestBinding;
 import weaselly.gtec.com.weaselly.network.HttpConnection;
 
-public class TrainingActivity extends AppCompatActivity {
-    ActivityTrainingBinding binding;
+public class TestActivity extends AppCompatActivity {
+    ActivityTestBinding binding;
     int questionType = 0;
     HttpConnection httpConnection = HttpConnection.getInstance();
     String email = "";
     public static WebView wvShowMun;
     public static int matter_size = 0;
     static String index = "";
-    static WebSettings settings;
+    static  WebSettings settings;
     public static String[] matters;
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        CheckPermission checkPermission = new CheckPermission(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE});
+        CheckPermission checkPermission=new CheckPermission(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE});
         checkPermission.checkMyPermission();
     }
 
@@ -48,27 +48,27 @@ public class TrainingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_training);
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_training);
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_test);
         binding.setActivity(this);
 
-        wvShowMun = (WebView)findViewById(R.id.wvShowMun);
+        wvShowMun = (WebView)findViewById(R.id.wvShowMun1);
         settings = wvShowMun.getSettings();
 
         getMatter();
 
-        questionType = WeasellyCon.BUTTON_ANSWER;
-//        binding.wvShowMun.loadUrl("file://"+Environment.getExternalStorageDirectory()+"/"+Environment.DIRECTORY_DOWNLOADS+"/tests.html");
+
+
         binding.btnInputAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (questionType) {
+                switch(questionType){
                     case WeasellyCon.BUTTON_ANSWER:
-                        ButtonAnswerBottomSheet2 buttonAnswerBottomSheet = new ButtonAnswerBottomSheet2();
-                        buttonAnswerBottomSheet.show(getSupportFragmentManager(), WeasellyCon.BUTTON_ANSWER + "");
+                        ButtonAnswerBottomSheet buttonAnswerBottomSheet = new ButtonAnswerBottomSheet();
+                        buttonAnswerBottomSheet.show(getSupportFragmentManager(),WeasellyCon.BUTTON_ANSWER+"");
                         break;
                     case WeasellyCon.SUBJECTIVE_ANSWER:
                         SubjectiveAnswerBottomSheet subjectiveAnswerBottomSheet = new SubjectiveAnswerBottomSheet();
-                        subjectiveAnswerBottomSheet.show(getSupportFragmentManager(), WeasellyCon.SUBJECTIVE_ANSWER + "");
+                        subjectiveAnswerBottomSheet.show(getSupportFragmentManager(),WeasellyCon.SUBJECTIVE_ANSWER+"");
                         break;
                 }
             }
@@ -86,7 +86,7 @@ public class TrainingActivity extends AppCompatActivity {
     Callback callback = new Callback() {
         @Override
         public void onFailure(Call call, IOException e) {
-
+            Log.i("tqtq", "casc");
         }
 
         @Override
@@ -100,7 +100,7 @@ public class TrainingActivity extends AppCompatActivity {
             matters = body.split(",");
             matter_size = matters.length;
 
-            Log.i("qopdjqw", "" + matter_size);
+            Log.i("qopdjqw", ""+matter_size);
 
             runOnUiThread(new Runnable() {
                 @Override
@@ -116,7 +116,7 @@ public class TrainingActivity extends AppCompatActivity {
 
         File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/matter");
 
-        if (!file.exists()) {
+        if(!file.exists()) {
             file.mkdir();
         }
 
